@@ -5,6 +5,8 @@ import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "./_components/ButtonLink";
 
+export const revalidate = 60;
+
 export default async function Home() {
   // 件数を2件に絞り込む
   const data = await getNewsList({
